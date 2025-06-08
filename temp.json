@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 85.3333,
+    "lat": 27.6667
+  },
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 26.12,
+    "feels_like": 26.12,
+    "temp_min": 26.12,
+    "temp_max": 26.12,
+    "pressure": 1007,
+    "humidity": 53,
+    "sea_level": 1007,
+    "grnd_level": 847
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.31,
+    "deg": 209,
+    "gust": 1.79
+  },
+  "clouds": {
+    "all": 87
+  },
+  "dt": 1749288706,
+  "sys": {
+    "country": "NP",
+    "sunrise": 1749252160,
+    "sunset": 1749301957
+  },
+  "timezone": 20700,
+  "id": 1282931,
+  "name": "Patan",
+  "cod": 200
+}

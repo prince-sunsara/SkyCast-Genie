@@ -10,14 +10,21 @@ SkyCast Genie is a sleek, modern weather web app built using **React.js**. It al
 - 🌡️ Current temperature and weather description
 - 🕒 Live time with seconds, date, AM/PM, Day
 
-### Default City
+---
 
-![alt text](image.png)
+### 👉 Default City
 
-### Search City
+![Default City](image.png)
 
-![alt text](image-1.png)
+### 👉 Search City
 
-### Error (if any)
+![City Search](image-1.png)
 
-![alt text](image-2.png)
+### 👉 Error (if any)
+
+![Error](image-2.png)
+
+### Different TimeZone
+
+![Timezone 1](image-3.png)
+![Timezone 2](image-4.png)
