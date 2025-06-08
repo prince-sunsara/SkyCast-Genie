@@ -36,48 +36,37 @@ export const Weather = ({ data }) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [data.timezone]);
-
-  //* fixed indian time
-  // const now = new Date();
-  // const day = now.toLocaleString("en-US", { weekday: "long" });
-  // const month = now.toLocaleString("en-US", { month: "long" });
-  // const date = now.getDate();
-  // const year = now.getFullYear();
-
-  // const hour = now.getHours().toString().padStart(2, "0");
-  // const minute = now.getMinutes().toString().padStart(2, "0");
-  // let seconds = now.getSeconds();
-
-  // const ampm = hour > 12 ? "pm" : "am";
-
-  // let timeStr = `${day}, ${hour}:${minute}:${seconds} ${ampm}`;
-  // const dayNight = hour <= 19 ? "Day" : "Night";
+  }, [data?.timezone]);
 
   return (
-    <div className="flex justify-between w-4/5 text-center py-16 px-8 mx-auto my-16 items-center bg-white/5 backdrop-blur-xs shadow-lg rounded-xl ">
-      <div>
+    <div className="w-[90%] max-w-6xl sm:flex justify-between text-center py-6 sm:py-16 px-8 mx-auto my-16 items-center bg-white/5 backdrop-blur-sm shadow-lg rounded-xl">
+      <div className="text-center">
         <img
-          className="w-32 mx-auto"
+          className="w-24 sm:w-28 md:w-32 mx-auto"
           src={`https://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}@2x.png`}
-          alt="Weather Image"
+          alt="Weather Icon"
         />
-        <h1 className="text-6xl mt-5 font-semibold">{data?.main?.temp} °C</h1>
-        <h3 className="mt-2">{data?.weather?.[0]?.description}</h3>
+        <h1 className="text-4xl md:text-5xl mt-4 font-bold">
+          {data?.main?.temp} °C
+        </h1>
+        <p className="mt-2 text-lg capitalize">
+          {data?.weather?.[0]?.description}
+        </p>
       </div>
 
-      {/* <div className="w-2/3 h-[4px] bg-gray-300 mx-auto rounded"></div> */}
+      <div className="bg-white/50 rounded my-2 h-1 w-[12rem] mx-auto sm:hidden"></div>
 
-      <div className="flex flex-col justify-center">
-        {/* <h3>{date + "-" + month + "-" + year}</h3>
-        <h2 className="text-2xl font-semibold">{timeStr}</h2>
-        <h4 className="text-[22px]">{dayNight}</h4> */}
-
-        <h3>{localTime.fullDate}</h3>
-        <h2 className="text-2xl font-semibold">{localTime.time}</h2>
-        <h4 className="text-[22px]">{localTime.dayNight}</h4>
+      <div className="text-center">
+        <h3 className="text-lg md:text-2xl">{localTime.fullDate}</h3>
+        <h2 className="text-2xl md:text-3xl font-semibold">{localTime.time}</h2>
+        <h4 className="text-lg md:text-xl mt-1">{localTime.dayNight}</h4>
       </div>
-      <h1 className="text-5xl font-semibold">{data.name}</h1>
+
+      <div className="bg-white/50 rounded my-2 h-1 w-[12rem] mx-auto sm:hidden"></div>
+
+      <div className="text-center">
+        <h1 className="text-4xl md:text-5xl font-bold">{data.name}</h1>
+      </div>
     </div>
   );
 };

@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <main className="h-screen bg-[url('https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-center bg-cover text-white flex flex-col justify-center">
+      <main className="h-screen bg-[url('https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-center bg-cover text-white px-4 py-6 flex flex-col items-center justify-center ">
         <LocationInput
           city={city}
           setCity={setCity}
