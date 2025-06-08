@@ -36,7 +36,7 @@ export const Weather = ({ data }) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [data?.timezone]);
+  }, [data]);
 
   return (
     <div className="w-[90%] max-w-6xl sm:flex justify-between text-center py-6 sm:py-16 px-8 mx-auto my-16 items-center bg-white/5 backdrop-blur-sm shadow-lg rounded-xl">
